@@ -89,7 +89,7 @@ ng test --code-coverage
 
 it will generate a folder name coverage and then you can check if the test cases covers the all the code.
 
-my code coverage link: `https://healthchallengecodecoveragereport.netlify.app/`
+my code coverage link: https://healthchallengecodecoveragereport.netlify.app/
 </p>
 
 <h3> Building the Application</h3>
