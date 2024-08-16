@@ -3,7 +3,7 @@
 <h2>Overview</h2>
 <p>
 Health Challenge Tracker is a single-page application (SPA) developed using Angular 14+. This application allows users add workouts and  track their workouts.</p>
-
+<p>live: https://healthchallengetasktracker.netlify.app/ </p>
 <h2>Features</h2>
 
 <h3> User Input</h3>
@@ -23,9 +23,11 @@ Health Challenge Tracker is a single-page application (SPA) developed using Angu
 
 <h3> Screenshots</h3>
 
-![]https://github.com/ichhakumari/Health-Challenge-Tracker-master/blob/main/Screenshot%202024-07-20%20193534.png](https://github.com/375tarun/Health-Challenge-Tracker/blob/main/Screenshot%202024-08-16%20171259.png
+![]https://github.com/375tarun/Health-Challenge-Tracker/blob/main/Screenshot%202024-08-16%20171259.png
 <br>
-![]https://github.com/ichhakumari/Health-Challenge-Tracker-master/blob/main/Screenshot%202024-07-20%20193713.png
+![]https://github.com/375tarun/Health-Challenge-Tracker/blob/main/Screenshot%202024-08-16%20171344.png
+<br>
+![]https://github.com/375tarun/Health-Challenge-Tracker/blob/main/Screenshot%202024-08-16%20171355.png
 
 
 
