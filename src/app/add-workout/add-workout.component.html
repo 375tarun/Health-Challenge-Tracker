@@ -1,0 +1,67 @@
+<div class="max-w-7xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8 w-full md:w-4/5">
+    <form [formGroup]="workoutForm" (ngSubmit)="onSubmit()">
+      <h2 class="text-2xl font-semibold text-center mb-6">Add Workout</h2>
+      
+      <div class="flex flex-col sm:flex-row gap-6 mb-4">
+        <!-- User Name Input -->
+        <div class="flex-1">
+          <label for="userName" class="block text-sm font-medium text-gray-700">User Name:</label>
+          <input 
+            id="userName" 
+            type="text" 
+            formControlName="userName" 
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 bg-gray-100 border border-gray-300"
+            placeholder="Enter your name" 
+          />
+          <div *ngIf="workoutForm.get('userName')?.invalid && workoutForm.get('userName')?.touched">
+            <small class="text-red-500" *ngIf="workoutForm.get('userName')?.errors?.['required']">User name is required.</small>
+            <small class="text-red-500" *ngIf="workoutForm.get('userName')?.errors?.['minlength']">User name must be at least 3 characters long.</small>
+          </div>
+        </div>
+        
+        <!-- Workout Dropdown -->
+        <div class="flex-1">
+          <label for="workout" class="block text-sm font-medium text-gray-700">Workout:</label>
+          <select 
+            id="workout" 
+            formControlName="workout" 
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 bg-gray-100 border border-gray-300"
+          >
+            <option value="" disabled>Select a workout</option>
+            <option *ngFor="let workout of workouts" [value]="workout">{{ workout }}</option>
+          </select>
+          <div *ngIf="workoutForm.get('workout')?.invalid && workoutForm.get('workout')?.touched">
+            <small class="text-red-500">Workout selection is required.</small>
+          </div>
+        </div>
+        
+        <!-- Minutes Input -->
+        <div class="flex-1">
+          <label for="minutes" class="block text-sm font-medium text-gray-700">Minutes:</label>
+          <input 
+            id="minutes" 
+            type="text" 
+            formControlName="minutes" 
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 bg-gray-100 border border-gray-300" 
+            placeholder="Duration in minutes" 
+          />
+          <div *ngIf="workoutForm.get('minutes')?.invalid && workoutForm.get('minutes')?.touched">
+            <small class="text-red-500" *ngIf="workoutForm.get('minutes')?.errors?.['required']">Minutes are required.</small>
+            <small class="text-red-500" *ngIf="workoutForm.get('minutes')?.errors?.['pattern']">Minutes must be a number.</small>
+          </div>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="flex-1 flex items-end">
+          <button 
+            type="submit" 
+            [disabled]="workoutForm.invalid" 
+            class="w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+          >
+            Add Workout
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
