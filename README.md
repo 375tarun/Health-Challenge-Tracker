@@ -44,7 +44,7 @@ Follow these steps to run the application locally.
 
 1. <b>Clone the Repository:</b>
 <p>
-    git clone https://github.com/ichhakumari/health-challenge-tracker-master.git
+    git clone https://github.com/375tarun/Health-Challenge-Tracker.git
     cd Health-Challenge-Tracker
 </p>
 
